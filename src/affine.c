@@ -23,7 +23,7 @@ void FlushSprites(void) {
 }
 
 void CopyOAM(void) {
-    u16* d;
+    struct OamData* d;
     s32 rem;
 
     if (gMain.pad == 0) {
@@ -37,10 +37,10 @@ void CopyOAM(void) {
 
     rem = 0x80 - gOAMControls.updated;
     if (rem > 0) {
-        d = (u16*)&gOAMControls.oam[gOAMControls.updated];
+        d = &gOAMControls.oam[gOAMControls.updated];
         for (; rem != 0; rem--) {
-            *d = 0x2A0;
-            (u8*)d += 8;
+            *(u16*)d = 0x2A0;
+            d++;
         }
     }
     if (gOAMControls.unk[0].unk7) {
