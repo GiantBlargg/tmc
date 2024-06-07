@@ -114,6 +114,11 @@ SECTIONS {
     iwram (NOLOAD) : ALIGN(4) {
         . = 0x00000000; gOAMControls = .;
         . = 0x00000420; gUnk_03000420 = .;
+        . = 0x00000520; gUnk_03000520 = .;
+        . = 0x00000664; gUnk_03000664 = .;
+        . = 0x000007A8; gUnk_030007A8 = .;
+        . = 0x000008EC; gUnk_030008EC = .;
+        . = 0x00000A30; gUnk_03000A30 = .;
         . = 0x00000B80; gActiveItems = .;
         . = 0x00000BF0; gRoomControls = .;
         . = 0x00000C24; gUnk_03000C24 = .;

@@ -174,6 +174,11 @@ const ProjectileDefinition gProjectileDefinition_22[] = {
 #endif
 
 // TODO
-const u8 gUnk_081326EC[] = {
-    32, 5, 0, 3, 100, 6, 0, 3, 168, 7, 0, 3, 236, 8, 0, 3, 48, 10, 0, 3,
-};
+extern u8 gUnk_03000420;
+extern u8 gUnk_03000520;
+extern u8 gUnk_03000664;
+extern u8 gUnk_030007A8;
+extern u8 gUnk_030008EC;
+extern u8 gUnk_03000A30;
+
+u8* const gUnk_081326EC[] = { &gUnk_03000520, &gUnk_03000664, &gUnk_030007A8, &gUnk_030008EC, &gUnk_03000A30 };
